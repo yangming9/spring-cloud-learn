@@ -1,0 +1,20 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: eureka-client #服务名称
+eureka:
+  client:
+    register-with-eureka: true #注册到Eureka的注册中心
+    fetch-registry: true #获取注册实例列表
+    service-url:
+      defaultZone: http://yangming:123456@localhost:8100/eureka/ #配置注册中心地址
+    registry-fetch-interval-seconds: 5  #拉取服务注册状态的时间
+    enabled: true
+  instance:
+    lease-renewal-interval-in-seconds: 5 #定义多久去注册中心续约
+    lease-expiration-duration-in-seconds: 20 #定义多久不去续约认为服务失效
+    hostname: localhost
+    metadata-map:
+      zone: jiangsu  #所在区域
+    prefer-ip-address: false  #是否优先使用ip作为主机名

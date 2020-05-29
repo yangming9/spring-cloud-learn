@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: eureka-server
+  security:
+    user:
+      name: yangming
+      password: 123456
 eureka:
   instance: #指定主机地址
     hostname: localhost
