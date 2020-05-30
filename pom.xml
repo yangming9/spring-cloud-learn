@@ -19,6 +19,8 @@
         <module>eureka-client</module>
         <module>user-service</module>
         <module>ribbon-service</module>
+        <module>hystrix-service</module>
+        <module>hystrix-dashboard</module>
     </modules>
 
     <properties>
