@@ -6,12 +6,12 @@
         <groupId>com.yangming.cloud</groupId>
         <artifactId>spring-cloud-learn</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.yangming.cloud</groupId>
     <artifactId>eureka-client</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
     <name>eureka-client</name>
 
     <description>Demo project for eureka-client</description>
