@@ -11,5 +11,10 @@ eureka:
       defaultZone: http://yangming:123456@localhost:8100/eureka/
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream' #±©Â¶hystrix¼à¿Ø¶Ëµã
 service-url:
   user-service: http://user-service

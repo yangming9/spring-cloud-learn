@@ -9,12 +9,11 @@
     </parent>
 
     <groupId>com.yangming.cloud</groupId>
-    <artifactId>user-service</artifactId>
+    <artifactId>hystrix-dashboard</artifactId>
     <version>1.0.0</version>
-    <name>user-service</name>
+    <name>hystrix-dashboard</name>
     <packaging>jar</packaging>
-
-    <description>Demo project for user-service</description>
+    <description>Demo project for hystrix-dashboard</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -26,6 +25,14 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 
