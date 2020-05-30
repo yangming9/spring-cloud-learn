@@ -1,8 +1,8 @@
 server:
-  port: 8102
+  port: 8103
 spring:
   application:
-    name: user-service
+    name: ribbon-service
 eureka:
   client:
     register-with-eureka: true
@@ -15,7 +15,9 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 20
     hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     metadata-map:
       zone: jiangsu
     prefer-ip-address: false
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+service-url:
+  user-service: http://user-service

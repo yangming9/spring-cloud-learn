@@ -9,12 +9,11 @@
     </parent>
 
     <groupId>com.yangming.cloud</groupId>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>hystrix-service</artifactId>
     <version>1.0.0</version>
+    <name>hystrix-service</name>
     <packaging>jar</packaging>
-    <name>eureka-client</name>
-
-    <description>Demo project for eureka-client</description>
+    <description>Demo project for hystrix-service</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -24,8 +23,22 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.yangming.cloud</groupId>
+            <artifactId>user-service</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.6.3</version>
         </dependency>
     </dependencies>
 
