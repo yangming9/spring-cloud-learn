@@ -1,8 +1,8 @@
 server:
-  port: 8102
+  port: 8113
 spring:
   application:
-    name: user-service
+    name: admin-client
   boot:
     admin:
       client:
@@ -15,11 +15,6 @@ management:
   endpoint:
     health:
       show-details: always
-#  zipkin:
-#    base-url: http://localhost:9411
-#  sleuth:
-#    sampler:
-#      probability: 0.1
 eureka:
   client:
     register-with-eureka: true
@@ -32,7 +27,7 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 20
     hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
     metadata-map:
       zone: jiangsu
     prefer-ip-address: false
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
