@@ -9,12 +9,11 @@
     </parent>
 
     <groupId>com.yangming.cloud</groupId>
-    <artifactId>user-service</artifactId>
+    <artifactId>api-gateway</artifactId>
     <version>1.0.0</version>
-    <name>user-service</name>
+    <name>api-gateway</name>
     <packaging>jar</packaging>
-
-    <description>Demo project for user-service</description>
+    <description>Demo project for api-gateway</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,15 +24,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
         </dependency>
     </dependencies>
 

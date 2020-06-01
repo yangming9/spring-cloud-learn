@@ -1,0 +1,25 @@
+server:
+  port: 8111
+service-url:
+  user-service: http://localhost:8102
+spring:
+  redis:
+    host: localhost
+    password: 123456
+    port: 6379
+  cloud:
+    gateway:
+      routes:
+        - id: user_service
+          uri: ${service-url.user-service}/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 2
+                key-resolver: "#{@ipKeyResolver}"
+          predicates:
+            - Path=/**
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
